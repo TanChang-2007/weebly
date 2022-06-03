@@ -23,7 +23,7 @@ function Home() {
   return (
     <div className='w-full max-h-fit bg-gradient-to-r from-sky-300 via-fuchsia-100 to-pink-300 overflow-auto'>
 
-      <div className=' font-mono flex justify-end text-xl px-3'>V1.0.9</div>
+      <div className=' font-mono flex justify-end text-xl px-3'>V1.1.0</div>
 
       <div className='flex flex-col ml-8 mr-8 justify-center items-center'>
         <div className='text-5xl p-9'>《哆啦A梦》</div>
