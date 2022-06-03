@@ -16,6 +16,8 @@ import ahboy2 from './ahboy2.png'
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { Icon } from '@iconify/react';
+import { motion } from "framer-motion";
+import anime from 'animejs/lib/anime.es.js';
 
 function Home() {
   return (
@@ -26,12 +28,12 @@ function Home() {
       <div className='flex flex-col ml-8 mr-8 justify-center items-center'>
         <div className='text-5xl p-9'>《哆啦A梦》</div>
         <div className='flex flex-row items-center'>
-          <img src={doraemon10} className=" w-2/6 p-4" />
+          <img src={doraemon10} className=" w-2/6 shadow-xl m-2 " />
           <p className='text-3xl'>《哆啦A梦》为日本漫画家藤子·F·不二雄笔下著名的儿童、科幻类型日本漫画，自1969年12月开始连载。本作主要叙述一只来自22世纪的猫型机器人——哆啦A梦，受原本主人野比世修托付，回到现代，帮助世修的高祖父野比大雄的故事。</p>
         </div>
         <div>
           <div className='text-5xl flex justify-center pt-24'>故事背景</div>
-          <img src={doraemon2} className=" float-right w-3/12 ml-1 p-4" />
+          <img src={doraemon2} className=" shadow-xl float-right w-3/12 ml-3" />
           <p className=' pt-8 text-2xl pb-4'>
             主角——野比大雄是家中独子，住在日本东京都练马区月见台芒原）的小学生。他和来自未来22世纪机器猫哆啦A梦共同生活。大雄虽然是身边围绕着父母、老师、同学的普通小学生，但是对于运动和念书都很不擅长，学业成绩极差，平均每五次考试就有一次是零分，时常遭到同学欺侮。此外运气也不好，经常遇到各种“灾难”，连猜拳都经常会输（除了和只会出石头的哆啦A梦猜拳能赢之外）。
             由于大雄此种特性，也影响到了未来子孙的生活和表现，为了让情况有所改善，其玄孙野比世修从未来的22世纪带了哆啦A梦来帮助大雄改变命运，利用哆啦A梦许多未来世界的秘密道具协助大雄，故事就此展开。
@@ -41,14 +43,14 @@ function Home() {
 
       <div className='flex flex-col pt-40'>
         <div className='flex flex-row justify-evenly '>
-          <Link to="/alpha"><button><img src={daxiong} /></button></Link>
-          <Link to="/beta"><button><img src={jingxiang} /></button></Link>
-          <Link to="/gamma"><button><img src={doraemon1} /></button></Link>
+          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/alpha"><button><img src={daxiong} /></button></Link></motion.button>
+          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/beta"><button><img src={jingxiang} /></button></Link></motion.button>
+          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/gamma"><button><img src={doraemon1} /></button></Link></motion.button>
         </div>
         <div className='flex flex-row justify-evenly pt-20 pb-20'>
-          <Link to="/delta"><button><img src={xiaofu} /></button></Link>
-          <Link to="/zeta"><button><img src={panghu} /></button></Link>
-          <Link to="/eta"><button><img src={ahboy} /></button></Link>
+          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/delta"><button><img src={xiaofu} /></button></Link></motion.button>
+          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/zeta"><button><img src={panghu} /></button></Link></motion.button>
+          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/eta"><button><img src={ahboy} /></button></Link></motion.button>
         </div>
       </div>
 
