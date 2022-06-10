@@ -20,8 +20,6 @@ import { motion } from "framer-motion";
 import 'animate.css';
 import "animate.css/animate.min.css";
 import ScrollAnimation from 'react-animate-on-scroll';
-import AOS from 'aos';
-import "aos/dist/aos.css";
 
 
 
