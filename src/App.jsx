@@ -1,4 +1,4 @@
-import { } from 'react'
+import { useEffect } from 'react'
 import doraemon10 from './doraemon (2).png'
 import doraemon2 from './doraemon3.png'
 import daxiong from './daxiong.png'
@@ -17,15 +17,18 @@ import ahboy2 from './ahboy2.png'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { Icon } from '@iconify/react';
 import { motion } from "framer-motion";
-import anime from 'animejs/lib/anime.es.js';
 import 'animate.css';
+import "animate.css/animate.min.css";
+import ScrollAnimation from 'react-animate-on-scroll';
+import AOS from 'aos';
+import "aos/dist/aos.css";
+
+
 
 function Home() {
   return (
     <div className='w-full max-h-fit bg-gradient-to-r from-sky-300 via-fuchsia-100 to-pink-300 overflow-auto'>
-
-      <div className=' font-mono flex justify-end text-xl px-3'>V1.1.1</div>
-
+      <div className=' font-mono flex justify-end text-xl px-3'>V1.1.2</div>
       <div className='flex flex-col ml-8 mr-8 justify-center items-center'>
         <div className='text-5xl p-9 animate__animated animate__fadeInDown'>《哆啦A梦》</div>
         <div className='flex flex-row items-center'>
@@ -41,31 +44,29 @@ function Home() {
           </p>
         </div>
       </div>
-
+      
       <div className='flex flex-col pt-40'>
-        <div className='flex flex-row justify-evenly '>
-          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/alpha"><button><img src={daxiong} className="animate__animated animate__fadeInLeft" /></button></Link></motion.button>
-          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/beta"><button><img src={jingxiang} className="animate__animated animate__fadeInDown" /></button></Link></motion.button>
-          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/gamma"><button><img src={doraemon1} className="animate__animated animate__fadeInRight" /></button></Link></motion.button>
+        <div className='flex flex-row justify-evenly'>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}><Link to="/alpha"><button><img data-aos="fadeIn" src={daxiong} className="animate__animated animate__fadeInLeft" /></button></Link></motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}><Link to="/beta"><button><img src={jingxiang} className="animate__animated animate__fadeInDown" /></button></Link></motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}><Link to="/gamma"><button><img src={doraemon1} className="animate__animated animate__fadeInRight" /></button></Link></motion.button>
         </div>
         <div className='flex flex-row justify-evenly pt-20 pb-20'>
-          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/delta"><button><img src={xiaofu} className="animate__animated animate__fadeInLeft"/></button></Link></motion.button>
-          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/zeta"><button><img src={panghu} className="animate__animated animate__fadeInUp"/></button></Link></motion.button>
-          <motion.button whileHover={{ scale:1.1 }} whileTap={{ scale: 0.9 }}><Link to="/eta"><button><img src={ahboy} className="animate__animated animate__fadeInRight" /></button></Link></motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}><Link to="/delta"><button><img src={xiaofu} className="animate__animated animate__fadeInLeft" /></button></Link></motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}><Link to="/zeta"><button><img src={panghu} className="animate__animated animate__fadeInUp" /></button></Link></motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}><Link to="/eta"><button><img src={ahboy} className="animate__animated animate__fadeInRight" /></button></Link></motion.button>
         </div>
       </div>
-
-      <div className=' flex w-full h-fit bg-white bg-fixed'>
-        <div className='flex flex-col gap-3 pb-2 text-xl'>
-          <p className=' text-black font-mono pl-10 pt-5'>This Website is made by Chang from MRGA</p>
-          <div className='flex flex-row gap-3'><p className=' text-black  font-mono pl-10'>If you have any fantastic ideas you can share with me!!</p><Icon className='text-black' icon="bx:wink-smile" width="24" height="24" /></div>
-          <p className='text-black font-mono pl-10'>You can find me on these social media</p>
-          <a href='https://www.instagram.com/aikchangtan.0609/'><div className='flex flex-row pl-10 gap-3'><Icon icon="akar-icons:instagram-fill" color="#fb3958" width="24" height="30" /><p className='text-black'>aikchangtan.0609</p></div></a>
-          <a href='https://www.facebook.com/profile.php?id=100045748002108'><div className='flex flex-row pl-10 gap-3'><Icon icon="bi:messenger" color="#0ea5e9" width="24" height="30" /><div className='text-black'>陈益昌</div></div></a>
-          <a href='https://github.com/TanChang-2007'><div className='flex flex-row font-mono pl-10 gap-3'><Icon icon="ant-design:github-filled" width="24" height="25" />TanChang</div></a>
+        <div className=' flex w-full h-fit bg-white bg-fixed'>
+          <div className='flex flex-col gap-3 pb-2 text-xl'>
+            <p className=' text-black font-mono pl-10 pt-5'>This Website is made by Chang from MRGA</p>
+            <div className='flex flex-row gap-3'><p className=' text-black  font-mono pl-10'>If you have any fantastic ideas you can share with me!!</p><Icon className='text-black' icon="bx:wink-smile" width="24" height="24" /></div>
+            <p className='text-black font-mono pl-10'>You can find me on these social media</p>
+            <a href='https://www.instagram.com/aikchangtan.0609/'><div className='flex flex-row pl-10 gap-3'><Icon icon="akar-icons:instagram-fill" color="#fb3958" width="24" height="30" /><p className='text-black'>aikchangtan.0609</p></div></a>
+            <a href='https://www.facebook.com/profile.php?id=100045748002108'><div className='flex flex-row pl-10 gap-3'><Icon icon="bi:messenger" color="#0ea5e9" width="24" height="30" /><div className='text-black'>陈益昌</div></div></a>
+            <a href='https://github.com/TanChang-2007'><div className='flex flex-row font-mono pl-10 gap-3'><Icon icon="ant-design:github-filled" width="24" height="25" />TanChang</div></a>
+          </div>
         </div>
-      </div>
-
     </div>
   );
 }
@@ -244,7 +245,7 @@ function Eta() {
         <div className=' font-bold text-5xl'>缺点</div>
       </div>
       <p className='pl-10 pr-10 text-xl tracking-wider pb-10 animate__animated animate__fadeInUp'>
-         几乎没有
+        几乎没有
       </p>
     </div>
   );
@@ -268,4 +269,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
