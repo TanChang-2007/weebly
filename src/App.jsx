@@ -28,13 +28,13 @@ function Home() {
     <div className='w-full max-h-fit bg-gradient-to-r from-sky-300 via-fuchsia-100 to-pink-300 overflow-auto'>
       <div className=' font-mono flex justify-end text-xl px-3'>V1.1.2</div>
       <div className='flex flex-col ml-8 mr-8 justify-center items-center'>
-        <div className='text-5xl p-9 animate__animated animate__fadeInDown'>《哆啦A梦》</div>
+        <div className='text-3xl sm:text-4xl md:text-5xl  p-9 animate__animated animate__fadeInDown'>《哆啦A梦》</div>
         <div className='flex flex-row items-center'>
           <img src={doraemon10} className=" w-2/6 shadow-xl m-2 animate__animated animate__fadeInRightBig" />
-          <p className='text-3xl animate__animated animate__fadeInRight'>《哆啦A梦》为日本漫画家藤子·F·不二雄笔下著名的儿童、科幻类型日本漫画，自1969年12月开始连载。本作主要叙述一只来自22世纪的猫型机器人——哆啦A梦，受原本主人野比世修托付，回到现代，帮助世修的高祖父野比大雄的故事。</p>
+          <p className='text-sm sm:text-lg md:text-2xl animate__animated animate__fadeInRight'>《哆啦A梦》为日本漫画家藤子·F·不二雄笔下著名的儿童、科幻类型日本漫画，自1969年12月开始连载。本作主要叙述一只来自22世纪的猫型机器人——哆啦A梦，受原本主人野比世修托付，回到现代，帮助世修的高祖父野比大雄的故事。</p>
         </div>
         <div>
-          <div className='text-5xl flex justify-center pt-24 animate__animated animate__fadeInUpBig'>故事背景</div>
+          <div className='text-5xl md:flex flex justify-center pt-24 animate__animated animate__fadeInUpBig'>故事背景</div>
           <img src={doraemon2} className=" shadow-xl float-right w-3/12 ml-3 animate__animated animate__fadeInLeftBig" />
           <p className=' pt-8 text-2xl pb-4 animate__animated animate__fadeInLeft'>
             主角——野比大雄是家中独子，住在日本东京都练马区月见台芒原）的小学生。他和来自未来22世纪机器猫哆啦A梦共同生活。大雄虽然是身边围绕着父母、老师、同学的普通小学生，但是对于运动和念书都很不擅长，学业成绩极差，平均每五次考试就有一次是零分，时常遭到同学欺侮。此外运气也不好，经常遇到各种“灾难”，连猜拳都经常会输（除了和只会出石头的哆啦A梦猜拳能赢之外）。
